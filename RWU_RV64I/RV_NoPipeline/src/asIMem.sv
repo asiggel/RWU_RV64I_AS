@@ -61,6 +61,6 @@ module as_imem (input  logic                       clk_i,
   begin
     data_o <= iram_s[addr_i[imem_addr_width-1:2]];
   end*/
-  assign data_o = iram_s[addr_i[imem_addr_width-1:2]]; // word aligned
+  assign data_o = iram_s[addr_i[imem_addr_width-1:2]]; // word aligned, so bits 1:0 not needed
                     
 endmodule : as_imem
